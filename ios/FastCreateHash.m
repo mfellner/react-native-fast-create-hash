@@ -1,19 +1,9 @@
-#import "FastCreateHash.h"
+#import <React/RCTBridgeModule.h>
 
-@implementation FastCreateHash
+@interface RCT_EXTERN_MODULE(FastCreateHash, NSObject)
 
-RCT_EXPORT_MODULE()
-
-// Example method
-// See // https://reactnative.dev/docs/native-modules-ios
-RCT_REMAP_METHOD(multiply,
-                 multiplyWithA:(nonnull NSNumber*)a withB:(nonnull NSNumber*)b
+RCT_EXTERN_METHOD(multiply:(float)a withB:(float)b
                  withResolver:(RCTPromiseResolveBlock)resolve
                  withRejecter:(RCTPromiseRejectBlock)reject)
-{
-  NSNumber *result = @([a floatValue] * [b floatValue]);
-
-  resolve(result);
-}
 
 @end
