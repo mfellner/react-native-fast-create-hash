@@ -1,15 +1,16 @@
-import { Buffer } from 'buffer';
+import { Buffer } from 'buffer/';
 import { NativeModules, NativeModulesStatic, Platform } from 'react-native';
 import { base64 } from 'rfc4648';
 
 declare module 'react-native' {
   interface NativeModulesStatic {
     FastCreateHash: {
-      multiply(a: number, b: number): Promise<number>;
       createHash(data64: string, algorithm: string): Promise<string>;
     };
   }
 }
+
+type Algorithm = 'sha256' | 'sha384' | 'sha512';
 
 const LINKING_ERROR =
   `The package '@mfellner/react-native-fast-create-hash' doesn't seem to be linked. Make sure: \n\n` +
@@ -25,11 +26,12 @@ const FastCreateHash = NativeModules.FastCreateHash
       },
     });
 
-export function multiply(a: number, b: number): Promise<number> {
-  return FastCreateHash.multiply(a, b);
-}
-
-export async function createHash(data: Uint8Array): Promise<Uint8Array> {
-  const base64Data = await FastCreateHash.createHash(base64.stringify(data), 'sha256');
-  return base64.parse(base64Data, { out: Buffer });
+/**
+ * @param data Raw data to hash.
+ * @param algorithm Hashing algorithm to use.
+ * @returns Promise of the hashed data.
+ */
+export async function createHash(data: Uint8Array, algorithm: Algorithm): Promise<Buffer> {
+  const base64Data = await FastCreateHash.createHash(base64.stringify(data), algorithm);
+  return base64.parse(base64Data, { out: Buffer }) as Buffer;
 }

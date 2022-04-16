@@ -1,35 +1,29 @@
-import { createHash, multiply } from '@mfellner/react-native-fast-create-hash';
-import { Buffer } from 'buffer';
+import { createHash } from '@mfellner/react-native-fast-create-hash';
+import { Buffer } from 'buffer/';
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
-  const [result, setResult] = useState<number | undefined>();
-  const [hash, setHash] = useState<string | Error | undefined>();
+  const [state, setState] = useState<string | Error | undefined>();
 
   useEffect(() => {
-    multiply(3, 7).then(setResult);
-
-    createHash(Buffer.from('hello', 'utf8'))
+    createHash(Buffer.from('hello', 'utf8'), 'sha256')
       .then((data) => {
-        // @ts-expect-error
         const hash = data.toString('hex');
         console.log('hash:', hash);
-        setHash(hash);
+        setState(hash);
       })
-      .catch(setHash);
+      .catch(setState);
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
-
-      {hash instanceof Error ? (
+      {state instanceof Error ? (
         <Text>
-          Error: {hash.name} {hash.message}
+          Error: {state.name} {state.message}
         </Text>
       ) : (
-        <Text>Hash: {hash}</Text>
+        <Text>Hash: {state}</Text>
       )}
     </View>
   );
