@@ -29,6 +29,7 @@
     "react-native-fast-create-hash.podspec",
     "!lib/typescript/example",
     "!android/build",
+    "!android/.idea",
     "!ios/build",
     "!**/__tests__",
     "!**/__fixtures__",
