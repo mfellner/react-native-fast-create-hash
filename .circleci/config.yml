@@ -3,7 +3,7 @@ version: 2.1
 executors:
   default:
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:16
     working_directory: ~/project
 
 commands:
@@ -50,14 +50,14 @@ jobs:
           command: |
             yarn lint
 
-  typescript:
+  typecheck:
     executor: default
     steps:
       - attach_project
       - run:
           name: Typecheck files
           command: |
-            yarn typescript
+            yarn typecheck
 
   unit-tests:
     executor: default
@@ -87,7 +87,7 @@ workflows:
       - lint:
           requires:
             - install-dependencies
-      - typescript:
+      - typecheck:
           requires:
             - install-dependencies
       - unit-tests:

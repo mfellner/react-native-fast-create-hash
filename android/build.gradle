@@ -19,10 +19,10 @@ def safeExtGet(prop, fallback) {
 }
 
 android {
-    compileSdkVersion safeExtGet('FastCreateHash_compileSdkVersion', 29)
+    compileSdkVersion safeExtGet('FastCreateHash_compileSdkVersion', 31)
     defaultConfig {
-        minSdkVersion safeExtGet('FastCreateHash_minSdkVersion', 16)
-        targetSdkVersion safeExtGet('FastCreateHash_targetSdkVersion', 29)
+        minSdkVersion safeExtGet('FastCreateHash_minSdkVersion', 21)
+        targetSdkVersion safeExtGet('FastCreateHash_targetSdkVersion', 31)
         versionCode 1
         versionName "1.0"
 

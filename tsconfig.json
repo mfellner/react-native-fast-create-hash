@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "react-native-fast-create-hash": ["./src/index"]
+      "@mfellner/react-native-fast-create-hash": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
