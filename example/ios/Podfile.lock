@@ -282,7 +282,7 @@ PODS:
   - React-jsinspector (0.68.1)
   - React-logger (0.68.1):
     - glog
-  - react-native-fast-create-hash (1.0.0-alpha.0):
+  - react-native-fast-create-hash (1.0.0-alpha.1):
     - React-Core
   - React-perflogger (0.68.1)
   - React-RCTActionSheet (0.68.1):
@@ -528,7 +528,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 4a4bae5671b064a2248a690cf75957669489d08c
   React-jsinspector: 218a2503198ff28a085f8e16622a8d8f507c8019
   React-logger: f79dd3cc0f9b44f5611c6c7862badd891a862cf8
-  react-native-fast-create-hash: 4f3c40800ab6fef0b3e1e13734b4eb340c8a6073
+  react-native-fast-create-hash: 19a72a6897931d71c2497b21547d86eed5ee655c
   React-perflogger: 30ab8d6db10e175626069e742eead3ebe8f24fd5
   React-RCTActionSheet: 4b45da334a175b24dabe75f856b98fed3dfd6201
   React-RCTAnimation: d6237386cb04500889877845b3e9e9291146bc2e
