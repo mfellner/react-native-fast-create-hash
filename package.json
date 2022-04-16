@@ -1,6 +1,6 @@
 {
   "name": "@mfellner/react-native-fast-create-hash",
-  "version": "0.0.0",
+  "version": "1.0.0-alpha.0",
   "description": "Fast, native createHash implementation for React Native.",
   "repository": "https://github.com/mfellner/react-native-fast-create-hash",
   "author": "Maximilian Fellner <mail@mfellner.eu> (https://github.com/mfellner)",
@@ -75,6 +75,7 @@
     "eslint-plugin-react-native": "4.0.0",
     "husky": "7.0.4",
     "jest": "27.5.1",
+    "jest-runner-eslint": "1.0.0",
     "pod-install": "0.1.33",
     "prettier": "2.6.2",
     "react": "17.0.2",

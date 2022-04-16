@@ -1,7 +1,14 @@
 {
-    "preset": "react-native",
-    "modulePathIgnorePatterns": [
-      "<rootDir>/example/node_modules",
-      "<rootDir>/lib/"
-    ]
-  }
+  "projects": [
+    {
+      "displayName": "test",
+      "preset": "react-native",
+      "modulePathIgnorePatterns": ["<rootDir>/example/node_modules", "<rootDir>/lib/"]
+    },
+    {
+      "displayName": "lint",
+      "runner": "jest-runner-eslint",
+      "testMatch": ["<rootDir>/{src,example}/**/*.{ts,tsx}", "<rootDir>/*.ts"]
+    }
+  ]
+}
