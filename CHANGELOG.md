@@ -1,6 +1,12 @@
 
 
-## 1.0.0-alpha.1 (2022-04-16)
+## [1.0.0-alpha.2](https://github.com/mfellner/react-native-fast-create-hash/compare/1.0.0-alpha.1...1.0.0-alpha.2) (2022-04-17)
+
+
+### Bug Fixes
+
+* exclude .idea from android ([2ee8b40](https://github.com/mfellner/react-native-fast-create-hash/commit/2ee8b40d5c00ad7c6cd71bff83f0805ddefafc11))
+* peer dependencies ([fd30042](https://github.com/mfellner/react-native-fast-create-hash/commit/fd30042ee6c11a0c18d24af1383c76ae05ddc86a))## 1.0.0-alpha.1 (2022-04-16)
 
 
 ### Features

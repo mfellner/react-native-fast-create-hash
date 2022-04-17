@@ -1,6 +1,6 @@
 {
   "name": "@mfellner/react-native-fast-create-hash",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "Fast, native createHash implementation for React Native.",
   "repository": "https://github.com/mfellner/react-native-fast-create-hash",
   "author": "Maximilian Fellner <mail@mfellner.eu> (https://github.com/mfellner)",
