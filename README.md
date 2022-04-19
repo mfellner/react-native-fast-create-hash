@@ -19,6 +19,12 @@ Fast, native createHash implementation for React Native.
 yarn add @mfellner/react-native-fast-create-hash
 ```
 
+In your `ios/Podfile`, set the target to iOS 13:
+
+```ruby
+platform :ios, '13.0'
+```
+
 ## Usage
 
 ```ts
